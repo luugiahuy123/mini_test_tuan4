@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhTrungBinh(t, a, v) {
+        let trungBinh = (t + a + v) / 3;
+        if (trungBinh < 5) {
+            return "ko dat"
+        } else if (trungBinh < 8) {
+            return "dat"
+        } else {
+            return "tot"
+        }
+    }
+
+    let toan = +prompt("nhap diem toan");
+    let anh = +prompt("nhao diem anh");
+    let van = +prompt("nhap diem van");
+    let ketQua = tinhTrungBinh(toan, anh, van)
+    document.write(ketQua);
+
+</script>
+</body>
+</html>

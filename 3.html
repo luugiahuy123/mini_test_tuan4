@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Customer {
+        constructor(name, age, point) {
+            this.name = name;
+            this.age = age;
+            this.point = point;
+        }
+
+        calculateDiscount() {
+            if (this.point > 100) {
+                return "giam gia 5%"
+            } else {
+                return "ko giam gia"
+            }
+        }
+    }
+
+    let customer1 = new Customer('A', 30, 150);
+    let customer2 = new Customer('B', 25, 90);
+    console.log(customer1.calculateDiscount());
+    console.log(customer2.calculateDiscount());
+
+</script>
+</body>
+</html>

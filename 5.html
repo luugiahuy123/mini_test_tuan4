@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function checkArr(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i])) {
+                count++;
+            }
+
+        }
+        return count;
+    }
+
+    let arr1 = [];
+    let lengOfArr = +parseInt(prompt("nhap do dai mang "))
+    for (let i = 0; i < lengOfArr; i++) {
+        arr1[i] = +prompt("nhap mang thu" + i);
+    }
+    let result = checkArr(arr1);
+    document.write(result)
+</script>
+</body>
+</html>
